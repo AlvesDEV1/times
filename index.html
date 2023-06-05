@@ -267,6 +267,22 @@
             justify-content: space-evenly;
             align-items: center;
         }
+        
+        .reservas {
+            display: flex;
+            position: relative;
+            top: 65px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background: linear-gradient(0deg, rgb(236, 240, 44) 5%, rgb(255, 255, 255) 70%);
+            width: 320px;
+            max-width: none;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px #411536;
+            justify-content: space-evenly;
+            align-items: center;
+        }
 
         .imgtime {
             width: 160px;
@@ -294,6 +310,13 @@
         }
 
         .nomerb {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+      
+        .nomereservas {
             display: flex;
             justify-content: center;
             padding-top: 10px;
@@ -392,6 +415,17 @@
             <img src="./RB.png" alt="redbull" title="RedBull" class="imgtime">
 
             <p><b>Max (GL/L) <br> Fabrício <br> Léo <br> Neutro <br> Vittor M.</b></p>
+        </div>
+        
+        <div class="nomereservas">
+            <p>Reservas</p>
+        </div>
+
+        <div class="reservas">
+
+            <img src="./banco.png" alt="redbull" title="RedBull" class="imgtime">
+
+            <p><b>João <br> Matheus <br> Pet <br> Silva</p>
         </div>
     </main>
     <script>
