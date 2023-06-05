@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./logofut.PNG" type="image/x-icon" />
+    <title>FUTchurras</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        /* scrollbar */
+        *::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        *::-webkit-scrollbar-track {
+            background: #f1e9e9;
+            border-radius: 10px
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background-color: #411536;
+            border-radius: 10px;
+            border: 3px solid #ffffff;
+        }
+
+        /* body */
+        body {
+            font: normal 16px Arial;
+            margin: 0 auto;
+            background-color: #CEEFF8;
+            color: #333333;
+        }
+
+        /* header */
+        header {
+            font-size: 18px;
+            background: linear-gradient(0deg, rgba(0, 87, 4, 1) 5%, rgba(34, 195, 166, 1) 70%);
+            box-shadow: 0px 5px 10px #411536;
+            max-width: none;
+        }
+
+        header .logo {
+            width: 75px;
+        }
+
+        header .logo:hover {
+            transform: scale(1.10);
+            cursor: pointer;
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        .nav-item {
+            margin: 0 15px;
+        }
+
+        .nav-link:hover {
+            background-color: rgba(2, 44, 2, 0.678);
+            transform: scale(1.10);
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            font-weight: 400;
+        }
+
+        .login-button button {
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+            background-color: #411536;
+
+        }
+
+        .login-button button a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        .mobile-menu-icon {
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
+        .iconmenu {
+            width: 50px;
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        @media screen and (max-width: 730px) {
+            .nav-bar {
+                padding: 1.5rem 4rem;
+            }
+
+            .nav-item {
+                display: none;
+            }
+
+            .nav-link:hover {
+                background-color: rgba(2, 44, 2, 0.678);
+                transform: scale(1.10);
+                cursor: pointer;
+            }
+
+            .login-button {
+                display: none;
+            }
+
+            .mobile-menu-icon {
+                display: block;
+            }
+
+            .mobile-menu-icon button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+
+            .mobile-menu ul {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                padding-bottom: 1rem;
+            }
+
+            .mobile-menu .nav-item {
+                display: flex;
+                align-items: center;
+                justify-content: right;
+                padding-top: 1.2rem;
+                padding-right: 53px;
+            }
+
+            .mobile-menu .login-button {
+                display: block;
+                padding: 1rem 2rem;
+            }
+
+            .mobile-menu .login-button button {
+                width: 100%;
+            }
+
+            .open {
+                display: block;
+            }
+        }
+
+        /* main */
+        .info {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 8px;
+            box-shadow: 0px 3px 10px #411536;
+            max-width: none;
+        }
+
+        .logotorneio2 {
+            width: 150px;
+            align-items: center;
+        }
+
+        .texto-torneio {
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        main {
+            padding: 8px;
+        }
+
+        .vs {
+            width: 30px;
+            height: 5%;
+        }
+
+        .aravig {
+            display: flex;
+            position: relative;
+            top: 65px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background: linear-gradient(0deg, rgb(55, 70, 209) 5%, rgb(247, 243, 243) 70%);
+            width: 320px;
+            max-width: none;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px #411536;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .pv6 {
+            display: flex;
+            position: relative;
+            top: 65px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background: linear-gradient(0deg, rgb(42, 42, 43) 5%, rgb(226, 231, 230) 70%);
+            width: 320px;
+            max-width: none;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px #411536;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .psg {
+            display: flex;
+            position: relative;
+            top: 65px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background: linear-gradient(0deg, rgb(58, 73, 207) 5%, rgb(239, 245, 244) 70%);
+            width: 320px;
+            max-width: none;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px #411536;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .redbull {
+            display: flex;
+            position: relative;
+            top: 65px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            background: linear-gradient(0deg, rgb(240, 53, 53) 5%, rgb(255, 255, 255) 70%);
+            width: 320px;
+            max-width: none;
+            border-radius: 20px;
+            box-shadow: 0px 5px 10px #411536;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .imgtime {
+            width: 160px;
+        }
+
+        .nomepv6 {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+            font-weight: bold;
+        }
+
+        .nomearavig {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .nomepsg {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+
+        .nomerb {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <a href="https://alvesdev1.github.io/futchurras/">
+                <img src="./logofut.PNG" alt="logo-futchurras" class="logo">
+            </a>
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="https://alvesdev1.github.io/futchurras/" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item"><a href="https://alvesdev1.github.io/jogos/" class="nav-link">Jogos</a></li>
+                    <li class="nav-item"><a href="https://alvesdev1.github.io/tabelas/" class="nav-link">Tabelas</a>
+                    </li>
+                    <li class="nav-item"><a href="https://alvesdev1.github.io/sobre/" class="nav-link">Sobre</a></li>
+                </ul>
+                <!--
+                <div class="login-button">
+                    <button><a href="https://alvesdev1.github.io/projeto-login/">Entrar</a></button>
+                </div>
+                -->
+            </div>
+
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="iconmenu" src="./mobilemenu.png" alt="mobile menu"></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="https://alvesdev1.github.io/futchurras/" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="https://alvesdev1.github.io/jogos/" class="nav-link">Jogos</a></li>
+                <li class="nav-item"><a href="https://alvesdev1.github.io/tabelas/" class="nav-link">Tabelas</a></li>
+                <li class="nav-item"><a href="https://alvesdev1.github.io/sobre/" class="nav-link">Sobre</a></li>
+            </ul>
+            <!--
+            <div class="login-button">
+                <button><a href="https://alvesdev1.github.io/projeto-login/">Entrar</a></button>
+            </div>
+            -->
+        </div>
+    </header>
+
+    <main>
+        <nav class="info">
+            <img class="icon" src="./logotorneio2.png" alt="logo-futchurras" class="logotorneio2">
+            <div class="texto-torneio">3º Torneio FUTchurras ⚽</div>
+        </nav>
+
+        <div class="nomearavig">
+            <p>Aravig</p>
+        </div>
+
+        <div class="aravig">
+
+            <img src="./ARAVIG.png" alt="aravig" title="Aravig" class="imgtime">
+
+            <p><b>Índio (GL) <i class="material-icons">medical_services</i><br> Araújo <br> Flávio <br> Luquinhas <br> Natan</b></p>
+        </div>
+
+        <div class="nomepv6">
+            <p>Pavilhão 6</p>
+        </div>
+
+        <div class="pv6">
+
+            <img src="./PV6.png" alt="pv6" title="Pavilhão 6" class="imgtime">
+
+            <p><b>Felipe (GL) <br> Pezão <br> Rafael Bi <br> Raphael <br> VT</b></p>
+        </div>
+
+        <div class="nomepsg">
+            <p>PSG</p>
+        </div>
+
+        <div class="psg">
+
+            <img src="./PSG.png" alt="psg" title="PSG" class="imgtime">
+
+            <p><b>Juliano (GL) <br> Bozo <br> Luciano <br> Marco <br> Roger</b></p>
+        </div>
+
+        <div class="nomerb">
+            <p>RedBull</p>
+        </div>
+
+        <div class="redbull">
+
+            <img src="./RB.png" alt="redbull" title="RedBull" class="imgtime">
+
+            <p><b>Max (GL/L) <br> Fabrício <br> Léo <br> Neutro <br> Vittor M.</b></p>
+        </div>
+    </main>
+    <script>
+        function menuShow() {
+            var menuMobile = document.querySelector('.mobile-menu');
+            if (menuMobile.classList.contains('open')) {
+                menuMobile.classList.remove('open');
+                document.querySelector('.iconmenu').src = "mobilemenu.png";
+            } else {
+                menuMobile.classList.add('open');
+                document.querySelector('.iconmenu').src = "closemenu.png";
+            }
+        }
+    </script>
+</body>
+
+</html>
